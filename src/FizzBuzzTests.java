@@ -41,5 +41,9 @@ public class FizzBuzzTests {
 	public void checkmultipleOf5IsBuzz() {
 		assertEquals(FizzBuzz.getNumbers(10), ("Buzz"));
 	}
+	@Test
+	public void checkmultipleOf5And3IsBuzz() {
+		assertEquals(FizzBuzz.getNumbers(15), ("FizzBuzz"));
+	}
 	
 }
