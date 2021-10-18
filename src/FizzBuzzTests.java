@@ -21,5 +21,9 @@ public class FizzBuzzTests {
 	public void check_0is0() {
 		assertEquals(FizzBuzz.getNumbers(0), ("0"));
 	}
+	@Test
+	public void check_1is1() {
+		assertEquals(FizzBuzz.getNumbers(1), ("1"));
+	}
 	
 }
