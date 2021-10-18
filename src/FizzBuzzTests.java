@@ -17,5 +17,9 @@ public class FizzBuzzTests {
 	public void sholdReturnBuzzForOneHundred() {
 		assertEquals("Buzz", FizzBuzz.getNumbers(100));
 	}
+	@Test
+	public void check_0is0() {
+		assertEquals(FizzBuzz.getNumbers(0), ("0"));
+	}
 	
 }
