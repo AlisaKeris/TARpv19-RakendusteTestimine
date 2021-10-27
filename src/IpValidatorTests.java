@@ -15,9 +15,14 @@ class IpValidatorTests {
 	}
 
 	@Test
-	void ShouldReturnFalse_GivebEmptyStringParameter() {
+	void ShouldReturnFalse_GivenEmptyStringParameter() {
 		IpValidator validator = new IpValidator();
 		assertTrue(validator.ValidateIp4Address(""));
+	}
+	@Test
+	void ShouldBe_True_GivenStringWithThreeDots() {
+		IpValidator validator = new IpValidator();
+		assertTrue(validator.ValidateIp4Address("1.2.3.1"));
 	}
 
 }
