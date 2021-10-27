@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 
 public class IpValidator {
 
@@ -14,5 +15,10 @@ public class IpValidator {
 		
 		return ipString.chars().filter(c->c=='.').count()==3;
 	}
+
+	public int[] getNumbers(String string) {
+		return Arrays.stream(string.split("\\.")).mapToInt(Integer::parseInt).toArray();
+	}
+	
 
 }
