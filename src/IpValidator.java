@@ -4,11 +4,16 @@ import java.util.Arrays;
 public class IpValidator {
 
 	public Boolean ValidateIp4Address(String ipString) {
-		if(hasThreeDots(ipString) && firstNumberInRange1_254(ipString)) {
+		if(hasThreeDots(ipString) && firstNumberInRange1_254(ipString) && 
+				hasFourNumbers(ipString)) {
 			return true;
 		}
 		
 		return false;
+	}
+
+	private boolean hasFourNumbers(String ipString) {
+		return getNumbers(ipString).length == 4;
 	}
 
 	private boolean firstNumberInRange1_254(String ipString) {
