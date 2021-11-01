@@ -6,11 +6,16 @@ public class IpValidator {
 	public Boolean ValidateIp4Address(String ipString) {
 		if(hasThreeDots(ipString) && firstNumberInRange1_254(ipString) && 
 				hasFourNumbers(ipString)  &&
-				numbersInRange(ipString)) {
+				numbersInRange(ipString) &&
+				lastNumberInRange1_254(ipString)) {
 			return true;
 		}
 		
 		return false;
+	}
+
+	private boolean lastNumberInRange1_254(String ipString) {
+		return getNumbers(ipString)[3]>0 && getNumbers(ipString)[3]<255;
 	}
 
 	private boolean numbersInRange(String ipString) {
